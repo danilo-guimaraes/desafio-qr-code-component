@@ -1,0 +1,112 @@
+/* ## Layout
+
+Os designs foram criados para as seguintes larguras:
+
+- Móvel: 375px
+- Desktop: 1440px
+
+> 💡 Estes são apenas os tamanhos do design. Certifique-se de que o conteúdo seja responsivo e atenda aos requisitos de WCAG testando toda a gama de tamanhos de tela, de 320px até telas grandes.
+
+## Cores
+
+- White: hsl(0, 0%, 100%)
+
+- Slate 300: hsl(212, 45%, 89%)
+- Slate 500: hsl(216, 15%, 48%)
+- Slate 900: hsl(218, 44%, 22%)
+
+## Tipografia
+
+### Texto do Corpo (Body Copy)
+
+- Tamanho da fonte (parágrafo): 15px
+
+### Fonte
+
+- Família: [Outfit](https://fonts.google.com/specimen/Outfit)
+- Pesos (Weights): 400, 700 */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Branco: hsl(0, 0%, 100%);
+    --Slate300: hsl(212, 45%, 89%);
+    --Slate500: hsl(216, 15%, 48%);
+    --Slate900: hsl(218, 44%, 22%);
+}
+
+body {
+    background-color: var(--Slate300);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Outfit', sans-serif;
+    padding: 20px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+
+}
+
+main div {
+    background-color: var(--Branco);
+    width: 320px;
+    padding: 16px;
+    border-radius: 20px;
+    box-shadow: 0 25px 25px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+main img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+main h1 {
+    color: var(--Slate900);
+    font-size: 22px;
+    font-weight: 700;
+    margin: 24px 12px 16px 12px;
+    line-height: 1.2;
+}
+
+main p {
+    color: var(--Slate500);
+    font-size: 15px;
+    font-weight: 400;
+    margin: 0 12px 24px 12px;
+    line-height: 1.4;
+}
+
+footer div {
+    font-size: 0.6875rem;
+    text-align: center;
+    color: var(--Slate500);
+    margin-top: auto;
+    padding: 10px 0;
+}
+
+footer div>a {
+    color: hsl(228, 45%, 44%);
+    text-decoration: none;
+}
+
+footer div>a:hover {
+    text-decoration: underline;
+}
